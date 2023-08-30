@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     },
 
     headerText:{
-        fontSize: '1.5em',
+        fontSize: 15,
     },
 
     movieGroup: {
@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
     },
 
     imageStyles: {
-        height: 200,
-        width: 100
+        height: 300,
+        width: 200
     }
     
 })
