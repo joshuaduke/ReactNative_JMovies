@@ -1,26 +1,26 @@
 import { View, Text, TouchableOpacity, FlatList, Image } from "react-native";
-import styles from '../HomeSection/homesection.style';
 import useFetch from "../../../hook/useFetch";
+import styles from "./moviesection.style";
 
 const MovieSection = ( props ) =>{
-    const {data, isLoading, error } = useFetch(
-        `${props.data.apiName}`, 
-        {
-          query: 'React developer',
-          num_pages: 1
-        })
+    // const {data, isLoading, error } = useFetch(
+    //     `${props.data.apiName}`, 
+    //     {
+    //       query: 'React developer',
+    //       num_pages: 1
+    //     })
 
-// const data = [
-//     { link: require('../../../assets/images/theBatman.jpg'), key: "1"},
-//     { link: require("../../../assets/images/theBatman.jpg"), key: "2"},
-//     { link: require("../../../assets/images/theBatman.jpg"), key: "3"},
-//     { link: require("../../../assets/images/theBatman.jpg"), key: "4"},
-//     { link: require("../../../assets/images/theBatman.jpg"), key: "5"},
-//     { link: require("../../../assets/images/theBatman.jpg"), key: "6"},
-//     { link: require("../../../assets/images/theBatman.jpg"), key: "7"},
-//     { link: require("../../../assets/images/theBatman.jpg"), key: "8"},
-//     { link: require("../../../assets/images/theBatman.jpg"), key: "9"},
-// ]
+const data = [
+    { link: require('../../../assets/images/theBatman.jpg'), key: "1"},
+    { link: require("../../../assets/images/theBatman.jpg"), key: "2"},
+    { link: require("../../../assets/images/theBatman.jpg"), key: "3"},
+    { link: require("../../../assets/images/theBatman.jpg"), key: "4"},
+    { link: require("../../../assets/images/theBatman.jpg"), key: "5"},
+    { link: require("../../../assets/images/theBatman.jpg"), key: "6"},
+    { link: require("../../../assets/images/theBatman.jpg"), key: "7"},
+    { link: require("../../../assets/images/theBatman.jpg"), key: "8"},
+    { link: require("../../../assets/images/theBatman.jpg"), key: "9"},
+]
 
     // console.log('Use Fetch: ', data)
     
@@ -41,8 +41,8 @@ const MovieSection = ( props ) =>{
                 <View>
                     <Image
                         style={styles.imageStyles}
-                        // source={ item.link }
-                        source={ {uri: `https://image.tmdb.org/t/p/w500${item.poster_path}`}}
+                        source={ item.link }
+                        // source={ {uri: `https://image.tmdb.org/t/p/w500${item.poster_path}`}}
                     />
                 </View>
                 )}
